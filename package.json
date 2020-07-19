@@ -30,7 +30,19 @@
     "trailingComma": "es5"
   },
   "name": "use-intensive-function-suspense",
-  "author": "Aman",
+  "author": "Aman Bhardwaj",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/inblack67/use-intensive-function-suspense"
+  },
+  "homepage": "https://github.com/inblack67/use-intensive-function-suspense/blob/master/README.md",
+  "keywords": [
+    "react",
+    "suspense",
+    "cpu intensive",
+    "hook",
+    "cache"
+  ],
   "module": "dist/use-intensive-function-suspense.esm.js",
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.1",

@@ -1,17 +1,17 @@
 ## use-intensive-function-suspense
 
-- That hassle free hook which takes care of all that loading/loaded state hack we have to do while doing CPU intensive caluclations like recursion.
+- That hassle free hook which takes care of all that busy waiting we have to do while our CPU is doing intensive calculations like recursion.
 
-- use-intensive-function-suspense plays along with React Suspense and under the hood with cache management packages
+- **use-intensive-function-suspense** plays along with **React Suspense** and under the hood with cache management packages
 
-- workerpool package is also used which returns a promise until the function is executed. Which is exaclty suspense needs to render fallback.
+- workerpool package is also used which returns a promise until the function is executed. Which is exaclty what suspense needs to render the fallback.
 
 ```js
 workerpool, lru-cache, immer, md5 etc.
 ```
 
-- Until the the function is executed, the promise is thrown by the use-intensive-function-suspense which will by caught by suspense and then suspense will render fallback, which can by any Loading component of your choice, until the promise actual resolves and the result arrives. After the promise is resolved, suspense will then render the component.
-Also, it has been made sure that it doesn't make the same ajax call request again and again. For this, data is stored in cache.
+- Until the the function is executed, the promise is thrown by the **use-intensive-function-suspense** which will by caught by suspense and then suspense will render fallback, which can by any Loading component of your choice, until the promise actual resolves and the result arrives. After the promise is resolved, suspense will then render the component.
+Also, it has been made sure that it doesn't make the same function call again and again. For this, data is stored in cache.
 
 ### Installation
 
@@ -45,6 +45,7 @@ const Fibonacci = ({ num }) => {
         * @param {Array} [args] 
     */
 
+    // the args has to be in array as the workerpool demands them so.
     const result = useItensiveFunction(fib, [num]);
 
     return (
