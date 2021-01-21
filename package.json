@@ -61,7 +61,7 @@
     "typescript": "^3.9.7"
   },
   "dependencies": {
-    "immer": "^7.0.5",
+    "immer": "^8.0.1",
     "lru-cache": "^6.0.0",
     "md5": "^2.2.1",
     "workerpool": "^6.0.0"
